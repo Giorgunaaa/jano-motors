@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>მანქანა — JANO MOTORS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Noto+Sans+Georgian:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/b.css">
+<link rel="stylesheet" href="assets/b2.css">
+</head>
+<body class="cp">
+<header>
+  <a class="logo" href="index.html"><span class="mk"><span>J</span></span>JANO <em>MOTORS</em></a>
+  <nav><a href="index.html#fleet">ავტოპარკი</a><a href="#book">ჯავშანი</a><a href="#contact">კონტაქტი</a><a href="#" class="lang" lang="en" aria-label="English version (მალე)">ENG</a></nav>
+  <div class="hright"><div class="cur-sw" role="group" aria-label="ვალუტა"><span class="cur-ind" aria-hidden="true"></span><button type="button" data-cur="GEL" aria-pressed="true" aria-label="ლარი (GEL)">₾<span class="cl"> GEL</span></button><button type="button" data-cur="USD" aria-pressed="false" aria-label="დოლარი (USD)">$<span class="cl"> USD</span></button></div><a class="hbtn" href="#book">დაჯავშნა</a></div>
+</header>
+<!-- ზედა ეკრანი (ვარიანტი 1 — დიაგონალი): მარცხნივ სახელი/ციფრები/ფასი, მარჯვნივ ფოტო დახრილი ჭრით -->
+<section class="ch" aria-label="მანქანა">
+  <div class="ch-l">
+    <div class="crumb"><a href="index.html">მთავარი</a><i>/</i><a href="index.html#fleet">ავტოპარკი</a><i>/</i><span id="crName"></span></div>
+    <div class="tag"><b>●</b>&nbsp; <span id="cNo"></span> — JANO MOTORS ავტოპარკი</div>
+    <h1 id="cName"></h1>
+    <div class="ch-sp" id="cStats"></div>
+    <div class="ch-row">
+      <div class="pbox">
+        <div class="now"><span id="pNow"></span><small>/ დღე</small></div>
+        <div class="was" id="pWas" hidden><s id="pOld"></s><span class="off" id="pOff"></span></div>
+      </div>
+      <a class="b1" href="#book" id="bookBtn">დაჯავშნე <span>→</span></a>
+    </div>
+  </div>
+  <div class="ch-r g-main" id="gMain"><button type="button" class="gbtn p" aria-label="წინა ფოტო">←</button><button type="button" class="gbtn n" aria-label="შემდეგი ფოტო">→</button><button type="button" class="g-fs" id="gFs">⛶ სრულ ეკრანზე</button></div>
+  <!-- ძრავის ხმის ღილაკი. ნამდვილი ჩანაწერის დასამატებლად: ჩადეთ ფაილი (მაგ. media/sound/car9.mp3)
+       და assets/data.js-ში მანქანის "sound" ველში ჩაწერეთ გზა. მანამდე car.js იყენებს assets/sound-yt.js-ს. -->
+  <div class="ch-snd">
+    <button type="button" class="start" id="sndBtn" data-audio-src="" aria-pressed="false" aria-label="მოუსმინე ძრავის ხმას"><span><i>ENGINE</i><b>START</b><i>STOP</i></span></button>
+    <div class="startlbl">დაქოქე და მოუსმინე<small id="sndSub"></small><span class="wv" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><div class="snd-note" id="sndNote" aria-live="polite"></div></div>
+  </div>
+  <div class="ch-ths"><div class="g-cnt" id="gCnt"></div><div class="g-th" id="gTh"></div></div>
+</section>
+<main class="cp-top"><div class="wrap">
+  <section class="specs" id="specs">
+    <div class="tag"><b>01</b> — მახასიათებლები</div><h2 class="kg">ტექნიკური<br>მონაცემები<span class="r">.</span></h2>
+    <div class="sp-hl" id="spHl"></div>
+    <div class="sp-tb" id="spTb"></div>
+    <div class="notes" id="spNotes"></div>
+  </section>
+  <section class="svm" aria-label="მომსახურება"><div class="svm-i"><span class="sv-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M17.5 4.5l2.2 0 3.3 5.2 3.8-.1c1 0 1.7.6 1.7 1.3s-.7 1.3-1.7 1.3l-3.8-.1-3.3 5.2h-2.2l1.6-5.2-2.9-.1-1 1.4h-1.6l.6-2.5-.6-2.5h1.6l1 1.4 2.9-.1z"/><path d="M4 25.5v-3.2l1.8-4.6c.3-.8 1-1.2 1.8-1.2h6.8c.8 0 1.5.4 1.8 1.2l1.8 4.6v3.2"/><path d="M4 22.3h14"/><path d="M5 25.5v2h2.6v-2M14.4 25.5v2H17v-2"/><circle cx="7.4" cy="24" r=".6"/><circle cx="14.6" cy="24" r=".6"/></svg></span><div><b>მოსახერხებელი ლოკაცია</b><small>მანქანას აეროპორტშივე ჩაიბარებთ — ჩამოფრენისთანავე გზას დაადგებით.</small></div></div><div class="svm-i"><span class="sv-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="17" r="11"/><path d="M16 10.5V17l4.5 3"/><path d="M12.5 3.5h7M16 3.5V6"/><path d="M25 7.5l1.8-1.8"/></svg></span><div><b>დაყოვნების გარეშე</b><small>თქვენი მანქანა დაჯავშნილია და უკვე გელოდებათ.</small></div></div><div class="svm-i"><span class="sv-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4.5" y="6.5" width="23" height="21" rx="1"/><path d="M4.5 12h23M10.5 4v5M21.5 4v5"/><path d="M11 19.5l3.4 3.4 7-7"/></svg></span><div><b>მოქნილი ქირაობა</b><small>რამდენიმე საათიდან ხანგრძლივ ვადამდე — როგორც გაწყობთ.</small></div></div><div class="svm-i"><span class="sv-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5l10 3.8v8c0 6.2-4.2 11.2-10 13.2-5.8-2-10-7-10-13.2v-8z"/><circle cx="16" cy="13" r="3.2"/><path d="M10.6 22.6c1-2.8 3-4.3 5.4-4.3s4.4 1.5 5.4 4.3"/></svg></span><div><b>დაზღვევა და 24/7</b><small>დაზღვევა, მაღალი დონის მომსახურება და მუშაობა 24/7 რეჟიმში.</small></div></div></section>
+  <section class="cbk book" id="book">
+    <div class="head"><div><div class="tag"><b>02</b> — ჯავშანი</div><h2 class="kg">დაჯავშნე<br><span id="bkName"></span><span class="r">.</span></h2></div><p>აირჩიეთ აყვანისა და დაბრუნების თარიღები — დღეები და ჯამი ავტომატურად გამოითვლება. <span class="demo-badge">დემო ფორმა</span></p></div>
+    <!-- ჯავშნის ფორმა (ვარიანტი 1 — ბილეთი): მარცხნივ კალენდარი + სწრაფი არჩევა + მძღოლი, მარჯვნივ შეჯამება ბილეთის სახით -->
+    <div class="bk">
+      <div class="bk-col bk-cal"><div class="bk-lbl"><b>1</b> აირჩიეთ თარიღები <span id="calHint" class="hint"></span></div>
+        <div class="cal-nav"><button type="button" id="calPrev" aria-label="წინა თვე">←</button><button type="button" id="calNext" aria-label="შემდეგი თვე">→</button></div>
+        <div class="cal" id="cal"></div>
+        <div class="quick" id="calQuick" role="group" aria-label="სწრაფი არჩევა"><span>სწრაფი არჩევა:</span><button type="button" data-n="1">1 დღე</button><button type="button" data-n="3">3 დღე</button><button type="button" data-n="7">კვირა</button><button type="button" data-n="14">2 კვირა</button><button type="button" data-n="30">თვე</button></div>
+        <div class="bk-lbl bk-lbl2"><b>2</b> მძღოლი</div>
+        <div class="drv" role="radiogroup" aria-label="მძღოლი">
+          <button type="button" class="on" data-driver="0" role="radio" aria-checked="true">მძღოლის გარეშე<small>თვითონ მართავთ</small></button>
+          <button type="button" data-driver="1" role="radio" aria-checked="false">მძღოლით<small>+<span id="drvRate"></span> ₾ / დღე <em>მაგალითი</em></small></button>
+        </div>
+      </div>
+      <div class="bk-col bk-sum tk">
+        <div class="tk-ph"><img id="sumImg" alt=""><b id="sumName"></b><span class="demo-badge">დემო</span></div>
+        <div class="tk-rt">
+          <div><small>აყვანა</small><b id="tkFromD">—</b><span id="tkFromW"></span></div>
+          <div class="mid"><em id="tkDays">—</em></div>
+          <div class="r"><small>დაბრუნება</small><b id="tkToD">—</b><span id="tkToW"></span></div>
+        </div>
+        <div class="tk-perf" aria-hidden="true"></div>
+        <div class="rows">
+          <div class="row"><span>დღიური ფასი</span><b id="rDaily">—</b></div>
+          <div class="row"><span>დღეები</span><b id="rDays">—</b></div>
+          <div class="row"><span>მანქანა</span><b id="rCar">—</b></div>
+          <div class="row drv-row" id="rowDrv" hidden><span>მძღოლი <em>მაგალითი</em></span><b id="rDrv">—</b></div>
+        </div>
+        <div class="total"><span>ჯამი</span><b id="sumTotal" data-value="0">—</b></div>
+        <form class="dform" onsubmit="return false" aria-label="სადემონსტრაციო მოთხოვნის ფორმა">
+          <label>სახელი<input type="text" name="name" autocomplete="name" placeholder="თქვენი სახელი"></label>
+          <label>ტელეფონი<input type="tel" name="phone" autocomplete="tel" placeholder="+995 ..."></label>
+        </form>
+        <button type="button" class="b1 send" id="sendBtn">მოთხოვნის გაგზავნა <span>→</span></button>
+        <div class="demo" id="demoNote">სადემონსტრაციო ფორმა — მოთხოვნა არსად იგზავნება</div>
+      </div>
+    </div>
+  </section>
+  <!-- სხვა მანქანები (ვარიანტი 1 — დახრილი ბარათები) -->
+  <section class="others"><div class="oth-hd"><div><div class="tag"><b>03</b> — ავტოპარკი</div><h2 class="kg" style="font-size:48px;margin-top:12px">სხვა მანქანები<span class="r">.</span></h2></div><a class="oth-all" href="index.html#fleet">მთელი ავტოპარკი →</a></div><div class="oth" id="oth"></div></section>
+</div></main>
+<footer id="contact"><div class="wrap">
+  <div class="ft">
+    <div class="w">JANO<br><em>MOTORS</em></div>
+    <div><h5>ნავიგაცია</h5><a href="index.html#fleet">ავტოპარკი</a><a href="#book">ჯავშანი</a><a href="#">წესები და პირობები</a></div>
+    <div><h5>საკონტაქტო ინფორმაცია</h5><div class="phb">საკონტაქტო ინფორმაცია<br>(ტელეფონი, ელ-ფოსტა, მისამართი — დაემატება კლიენტის მონაცემებით)</div></div>
+  </div>
+  <div class="fb"><span>© 2026 JANO MOTORS</span><span>დიზაინ-კონცეფცია B2 · ფოტოები: janomotors.com</span></div>
+</div></footer>
+<script src="assets/data.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/gallery.js"></script>
+<script src="assets/sound-yt.js"></script>
+<script src="assets/engine-synth.js"></script>
+<script src="assets/car.js"></script>
+</body>
+</html>
