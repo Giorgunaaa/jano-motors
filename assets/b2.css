@@ -269,6 +269,10 @@ nav a.lang:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
 .start.play b{color:var(--acc)}.start.play::before{animation-duration:.7s}
 .startlbl{font-size:14.5px;font-weight:700;line-height:1.35;max-width:190px}
 .startlbl small{display:block;color:#b7b9c0;font-weight:500;font-size:12.5px;margin-top:3px}
+.startlbl .demo-tag{display:inline-flex;align-items:center;gap:7px;margin-top:9px;padding:4px 10px 4px 8px;border:1px solid rgba(255,122,26,.5);background:rgba(255,122,26,.08);color:var(--acc);font-family:Archivo,sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;line-height:1;cursor:default}
+.startlbl .demo-tag i{width:6px;height:6px;border-radius:50%;background:var(--acc);box-shadow:0 0 8px var(--acc);animation:dtag 1.6s ease-in-out infinite}
+@keyframes dtag{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.startlbl .demo-tag i{animation:none}}
 .startlbl .wv{display:none;align-items:center;gap:3px;height:22px;margin-top:8px}
 .startlbl .wv i{width:3px;height:6px;background:var(--acc);display:block;border-radius:2px;animation:wv .8s ease-in-out infinite alternate}
 .startlbl .wv i:nth-child(2n){animation-delay:.2s}.startlbl .wv i:nth-child(3n){animation-delay:.35s}
