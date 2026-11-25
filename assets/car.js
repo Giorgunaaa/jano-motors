@@ -97,12 +97,6 @@ $('spTb').innerHTML=
   row('საწვავი',c.fuel)+row('კარები',c.doors)+row('გამოშვების წელი',String(c.year))+
   `<div class="r"><span>დღიური ფასი</span><b><span ${priceAttr(c.gel,c.usd)}></span>${c.oldGel?` <s style="color:#9a9ca3;font-weight:500;margin-left:6px" ${priceAttr(c.oldGel,c.oldUsd)}></s>`:''}</b></div>`+
   row('სიმძლავრე',c.hp+' ცხ.ძ.');
-const notes=[];
-notes.push('<p>სახელი, წელი, ფასი (₾ და $), სიმძლავრე, საწვავი და კარები — JANO MOTORS-ის საჯარო მონაცემებიდან (janomotors.com).</p>');
-if(s.src.length)notes.push('<p>0–100, საწვავის ხარჯი, ძრავი, კოლოფი და წამყვანი თვლები — მწარმოებლის გამოქვეყნებული მონაცემები ამ მოდელისა და თაობისთვის; კონკრეტული მანქანის კომპლექტაციით შეიძლება ოდნავ განსხვავდებოდეს. წყარო: '+s.src.map(x=>`<a href="${x.u}" target="_blank" rel="noopener">${x.t}</a>`).join(' · ')+'</p>');
-if(s.mfrNote)notes.push(`<p>${s.mfrNote}</p>`);
-notes.push('<p>„—“ ნიშნავს, რომ სანდო ოფიციალური მონაცემი ვერ მოიძებნა.</p>');
-$('spNotes').innerHTML=notes.join('');
 /* ---------- სხვა მანქანები ---------- */
 const ci=FLEET.indexOf(c);const oth=[1,2,3,4].map(k=>FLEET[(ci+k)%FLEET.length]);
 const thumb={car10:'media/car10/04.jpg'};
