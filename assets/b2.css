@@ -345,11 +345,13 @@ nav a.lang:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
 
 /* ===== მთავარი გვერდის ჯავშანი — იგივე „ბილეთის" სტილი + მანქანების სვეტი ===== */
 .hbk{margin-top:0}
-.hbk .bk{grid-template-columns:320px minmax(0,1fr) 400px;gap:18px}
+.hbk .bk{grid-template-columns:clamp(250px,21vw,320px) minmax(0,1fr) clamp(310px,27vw,400px);gap:18px}
 .hbk .cal{gap:30px}
-.hbk .bk-cal{padding:26px 24px}.hbk .cal-nav{right:24px}
+.hbk .bk-cal{padding:26px 24px;grid-column:auto;order:0}.hbk .cal-nav{right:24px}
+.hbk .cal,.hbk .quick{-webkit-user-select:none;user-select:none}
 .hbk .days button{height:42px}
-@media (max-width:1320px){.hbk .bk{grid-template-columns:300px minmax(0,1fr)}.hbk .bk-cal{grid-column:auto;order:0}.hbk .tk{grid-column:1/-1;max-width:560px;width:100%;margin:0 auto}}
+@media (max-width:1400px) and (min-width:1241px){.hbk .quick{gap:6px}.hbk .quick span{margin-right:2px}.hbk .quick button{padding:8px 10px}.hbk .bk-cars{padding:20px 16px}.hbk .ci{grid-template-columns:50px minmax(0,1fr) auto;gap:9px;padding-right:8px}.hbk .ci img{width:50px;height:38px}.hbk .ci .p{text-align:right}.hbk .ci .p small{display:block;margin:1px 0 0}}
+@media (max-width:1240px){.hbk .bk{grid-template-columns:300px minmax(0,1fr)}.hbk .bk-cal{grid-column:auto;order:0}.hbk .tk{grid-column:1/-1;max-width:560px;width:100%;margin:0 auto}}
 @media (max-width:1000px){.hbk .bk{grid-template-columns:1fr}.hbk .bk-cal{grid-column:auto;order:0}}
 
 /* ===== სხვა მანქანები (ვარიანტი 1 — დახრილი ბარათები) ===== */
