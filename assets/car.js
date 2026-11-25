@@ -85,15 +85,14 @@ sb.addEventListener('click',()=>{
   clearTimeout(t);t=setTimeout(()=>{sb.classList.remove('play');$('sndNote').textContent=''},reduce?1200:2200)});
 /* ---------- მახასიათებლები ---------- */
 const s=c.spec,NA='—';
-const stdName={WLTP:'WLTP',NEDC:'NEDC',EPA:'EPA (აშშ), გადაყვანილი ლ/100კმ-ში',ADR:'ADR 81/02 (ავსტრალია)'};
-const tile=(k,v,unit,sub)=>`<div class="t"><div class="k">${k}</div><div class="v ${v?'':'na'}">${v||NA}${v&&unit?`<small>${unit}</small>`:''}</div><div class="s">${sub||''}</div></div>`;
+const tile=(k,v,unit)=>`<div class="t"><div class="k">${k}</div><div class="v ${v?'':'na'}">${v||NA}${v&&unit?`<small>${unit}</small>`:''}</div></div>`;
 $('spHl').innerHTML=
-  tile('0–100 კმ/სთ',s.acc,'წმ',s.acc?'მწარმოებლის მონაცემი':'ოფიციალური მონაცემი არ მოიძებნა')+
-  tile('საწვავის ხარჯი',s.cons,'ლ/100კმ',s.cons?`მწარმოებლის/ოფიციალური, ${stdName[s.consStd]||''} · კომბინირებული`:(s.consNote||'ოფიციალური მონაცემი არ მოიძებნა'))+
-  tile('სიმძლავრე',String(c.hp),'ცხ.ძ.','JANO MOTORS-ის მონაცემი');
-const row=(k,v,tag)=>`<div class="r"><span>${k}</span><b class="${v?'':'na'}">${v||NA}${v&&tag?`<span class="src-tag">${tag}</span>`:''}</b></div>`;
+  tile('0–100 კმ/სთ',s.acc,'წმ')+
+  tile('საწვავის ხარჯი',s.cons,'ლ/100კმ')+
+  tile('სიმძლავრე',String(c.hp),'ცხ.ძ.');
+const row=(k,v)=>`<div class="r"><span>${k}</span><b class="${v?'':'na'}">${v||NA}</b></div>`;
 $('spTb').innerHTML=
-  row('ძრავი',s.engine,'მწარმ.')+row('გადაცემათა კოლოფი',s.trans,'მწარმ.')+row('წამყვანი თვლები',s.drive,'მწარმ.')+
+  row('ძრავი',s.engine)+row('გადაცემათა კოლოფი',s.trans)+row('წამყვანი თვლები',s.drive)+
   row('საწვავი',c.fuel)+row('კარები',c.doors)+row('გამოშვების წელი',String(c.year))+
   `<div class="r"><span>დღიური ფასი</span><b><span ${priceAttr(c.gel,c.usd)}></span>${c.oldGel?` <s style="color:#9a9ca3;font-weight:500;margin-left:6px" ${priceAttr(c.oldGel,c.oldUsd)}></s>`:''}</b></div>`+
   row('სიმძლავრე',c.hp+' ცხ.ძ.');
